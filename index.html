@@ -2,20 +2,37 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ESCR | GWA Calculator</title>
+    <title>ESCR GWA Calculator | East System Colleges of Rizal</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <p>ESCR GWA Calculator</p>
+    <div class="container">
+      <!-- LEFT SIDE -->
+      <div class="info">
+        <h1>ESCR GWA Calculator</h1>
+        <p>
+          Compute your General Weighted Average easily. Add your subjects, enter
+          grades and units, then click calculate.
+        </p>
+      </div>
 
-    <p>Subject</p>
-    <p>Grade</p>
-    <p>Units</p>
+      <!-- RIGHT SIDE -->
+      <div class="calculator">
+        <div class="header">
+          <span>Course</span>
+          <span>Grade</span>
+          <span>Units</span>
+          <button id="addBtn">+</button>
+        </div>
 
-    <p></p>
-    <input type="text" />
-    <input type="text" />
-    <button>Add</button>
-    <button>Delete</button>
+        <div id="courseList"></div>
+
+        <button id="calculateBtn" class="calculate">CALCULATE</button>
+
+        <h2 id="result"></h2>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
