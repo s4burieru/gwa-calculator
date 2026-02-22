@@ -30,14 +30,14 @@
     .calculator {
     background: white;
     color: black;
-    padding: 20px;
-    border-radius: 12px;
+    padding: 20px;  
     width: 450px;
+    position: relative;
     }
 
     .header {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 50px;
+    grid-template-columns: 1fr 1fr 1fr;
     background: #f6c915;
     padding: 10px;
     font-weight: bold;
@@ -50,9 +50,16 @@
     border: none;
     font-size: 18px;
     cursor: pointer;
-    border-radius: 50%;
-    height: 30px;
-    width: 30px;
+    border-radius: 12px 12px 0px 0px;
+    height: 40px;
+    width: 60px;
+    position: absolute;
+    top: -40px;
+    right: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px   rgba(212, 212, 212, 0.15);
     }
 
     .course-row {
