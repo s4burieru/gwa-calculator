@@ -13,7 +13,7 @@ function addCourse(courseName = "", grade = "", units = "") {
   row.classList.add("course-row");
 
   row.innerHTML = `
-    <input type="text" class="course-name" placeholder="Course ${courseCount}" value="${courseName}">
+    <input type="text" class="course-name" placeholder="Subject ${courseCount}" value="${courseName}">
     <input type="number" step="0.01" placeholder="0.00" value="${grade}">
     <input type="number" placeholder="0" value="${units}">
     <button class="deleteBtn">X</button>
@@ -36,7 +36,7 @@ function updateCourseNumbers() {
     courseCount++;
     const input = row.querySelector(".course-name");
     if (input.value === "") {
-      input.placeholder = `Course ${courseCount}`;
+      input.placeholder = `Subject ${courseCount}`;
     }
   });
 }
