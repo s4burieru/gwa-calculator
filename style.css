@@ -104,11 +104,12 @@
     height: 46px;
     margin-top: 40px;
     padding: 12px;
-    background: #ddd;
+    background: #e74c3c;
     border: none;
     font-weight: bold;
     cursor: pointer;
     border-radius: 8px;
+    color: white;
     }
 
     .calculate:hover {
