@@ -67,7 +67,7 @@ function calculateGWA() {
   result.textContent = "Your GWA: " + gwa.toFixed(2);
 }
 
-// Event Listeners  
+// Event Listeners
 addBtn.addEventListener("click", () => addCourse());
 calculateBtn.addEventListener("click", calculateGWA);
 
