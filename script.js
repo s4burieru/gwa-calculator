@@ -7,6 +7,12 @@ let courseCount = 0;
 
 // Add Course Row
 function addCourse(courseName = "", grade = "", units = "") {
+  // Check if maximum of 8 subjects reached
+  if (courseCount >= 8) {
+    alert("Maximum of 8 subjects allowed.");
+    return;
+  }
+
   courseCount++;
 
   const row = document.createElement("div");
@@ -22,23 +28,30 @@ function addCourse(courseName = "", grade = "", units = "") {
   // Delete row
   row.querySelector(".deleteBtn").addEventListener("click", () => {
     row.remove();
+    courseCount--;
     updateCourseNumbers();
+    updateAddBtnState();
   });
 
   courseList.appendChild(row);
+  updateAddBtnState();
 }
 
 // Update course numbering after delete
 function updateCourseNumbers() {
   const rows = document.querySelectorAll(".course-row");
-  courseCount = 0;
-  rows.forEach((row) => {
-    courseCount++;
+  courseCount = rows.length;
+  rows.forEach((row, index) => {
     const input = row.querySelector(".course-name");
     if (input.value === "") {
-      input.placeholder = `Subject ${courseCount}`;
+      input.placeholder = `Subject ${index + 1}`;
     }
   });
+}
+
+// Update add button state based on subject limit
+function updateAddBtnState() {
+  addBtn.disabled = courseCount >= 8;
 }
 
 // Calculate GWA
@@ -75,3 +88,6 @@ calculateBtn.addEventListener("click", calculateGWA);
 for (let i = 0; i < 5; i++) {
   addCourse("", 1.00);
 }
+
+// Initialize button state
+updateAddBtnState();
