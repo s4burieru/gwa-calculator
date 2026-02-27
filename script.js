@@ -86,7 +86,7 @@ calculateBtn.addEventListener("click", calculateGWA);
 
 // Default 5 courses
 for (let i = 0; i < 5; i++) {
-  addCourse("", 1.00);
+  addCourse("");
 }
 
 // Initialize button state
