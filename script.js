@@ -73,5 +73,5 @@ calculateBtn.addEventListener("click", calculateGWA);
 
 // Default 5 courses
 for (let i = 0; i < 5; i++) {
-  addCourse("", 3);
+  addCourse("", 1.00);
 }
