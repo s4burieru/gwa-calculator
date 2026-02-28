@@ -51,6 +51,12 @@ body {
   font-size: 16px;
 }
 
+#courseList {
+  max-height: 340px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
 #addBtn {
   background: white;
   border: none;
@@ -112,6 +118,7 @@ body {
   cursor: pointer;
   border-radius: 8px;
   color: white;
+  font-size: 16px;
 }
 
 .calculate:hover {
