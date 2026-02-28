@@ -5,6 +5,7 @@
   font-family: "Poppins";
 }
 
+
 body {
   margin: 0;
   background: #e73c3c;
@@ -22,6 +23,7 @@ body {
 
 .info {
   max-width: 400px;
+  text-align: justify;
 }
 
 .info h1 {
@@ -110,7 +112,7 @@ body {
 .calculate {
   width: 100%;
   height: 46px;
-  margin-top: 40px;
+  margin-top: 18px;
   padding: 12px;
   background: #e74c3c;
   border: none;
