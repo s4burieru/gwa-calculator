@@ -16,7 +16,7 @@ function addCourse(courseName = "", grade = "", units = "") {
     <input type="text" class="course-name" placeholder="Subject ${courseCount}" value="${courseName}">
     <input type="number" step="0.01" placeholder="0.00" value="${grade}">
     <input type="number" placeholder="0" value="${units}">
-    <button class="deleteBtn">X</button>
+    <button class="deleteBtn"><img src="media/trash.png" alt="Delete course"></button>
   `;
 
   // Delete row

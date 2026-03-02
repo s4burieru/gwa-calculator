@@ -61,7 +61,6 @@ body {
 #addBtn {
   background: white;
   border: none;
-  font-size: 24px;
   cursor: pointer;
   border-radius: 10px 10px 0px 0px;
   height: 48px;
@@ -73,6 +72,12 @@ body {
   align-items: center;
   justify-content: center;
   box-shadow: 0 2px 8px rgba(212, 212, 212, 0.15);
+  padding: 0;
+}
+
+#addBtn img {
+  height: 32px;
+  width: 32px;
 }
 
 .course-row {
@@ -106,6 +111,15 @@ body {
   cursor: pointer;
   border-radius: 8px;
   height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.deleteBtn img {
+  height: 20px;
+  width: 20px;
+  filter: invert(1);
 }
 
 .calculate {
