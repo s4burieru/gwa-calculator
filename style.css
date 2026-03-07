@@ -50,7 +50,7 @@ body {
 .header {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  background: #f6c915;
+  background: oklch(90.5% 0.182 98.111);
   padding: 10px;
   font-weight: 600;
   border-radius: 8px 8px 0 0;
