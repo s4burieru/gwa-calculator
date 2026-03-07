@@ -7,7 +7,7 @@
 
 body {
   margin: 0;
-  background: #e73c3c;
+  background: oklch(39.6% 0.141 25.723);
   color: white;
 }
 
@@ -112,7 +112,7 @@ body {
 }
 
 .deleteBtn {
-  background: #e74c3c;
+  background: oklch(44.4% 0.177 26.899);
   color: white;
   border: none;
   padding: 5px;
@@ -135,7 +135,7 @@ body {
   height: 46px;
   margin-top: 18px;
   padding: 12px;
-  background: #e74c3c;
+  background: oklch(44.4% 0.177 26.899);
   border: none;
   font-weight: bold;
   cursor: pointer;
@@ -145,12 +145,12 @@ body {
 }
 
 .calculate:hover {
-  background: #f6c915;
+  background: oklch(63.7% 0.237 25.331);
   transition-duration: 0.5s;
 }
 
 #result {
   text-align: center;
   margin-top: 40px;
-  color: #e74c3c;
+  color: oklch(57.7% 0.245 27.325);
 }
