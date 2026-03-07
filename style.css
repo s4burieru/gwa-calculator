@@ -145,12 +145,12 @@ body {
 }
 
 .calculate:hover {
-  background: oklch(63.7% 0.237 25.331);
+  background: oklch(57.7% 0.245 27.325);
   transition-duration: 0.5s;
 }
 
 #result {
   text-align: center;
   margin-top: 40px;
-  color: oklch(57.7% 0.245 27.325);
+  color: oklch(44.4% 0.177 26.899);
 }
