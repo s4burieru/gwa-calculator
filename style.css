@@ -15,9 +15,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   gap: 80px;
   padding: 20px;
+  flex-wrap: wrap;
 }
 
 .escr-logo {
@@ -31,10 +32,12 @@ body {
   margin-top: 6px;
   max-width: 400px;
   text-align: justify;
+  flex: 1;
+  min-width: 280px;
 }
 
 .info h1 {
-  font-size: 36px;
+  font-size: clamp(24px, 5vw, 36px);
   margin-bottom: 20px;
 }
 
@@ -43,8 +46,10 @@ body {
   color: black;
   border-radius: 8px 0px 8px 8px;
   padding: 20px;
-  width: 680px;
+  width: clamp(280px, 90vw, 680px);
+  max-width: 100%;
   position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .header {
@@ -94,15 +99,16 @@ body {
   padding: 10px;
   align-items: center;
   border-bottom: 1px solid #ddd;
-  font-size: 20px;
+  font-size: clamp(14px, 4vw, 20px);
+  gap: 8px;
 }
 
 .course-row input {
-  width: 80%;
-  padding: 5px;
+  width: 100%;
+  padding: 8px;
   border: 1px solid #ccc;
   border-radius: 8px;
-  font-size: 18px;
+  font-size: clamp(14px, 3vw, 18px);
 }
 
 .course-row .course-name {
@@ -153,4 +159,145 @@ body {
   text-align: center;
   margin-top: 40px;
   color: oklch(44.4% 0.177 26.899);
+}
+
+/* Tablet (768px and below) */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .escr-logo {
+    width: 100px;
+  }
+
+  .info {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .header {
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 14px;
+    height: 48px;
+  }
+
+  .calculator {
+    width: 100%;
+  }
+
+  #courseList {
+    max-height: 300px;
+  }
+
+  .course-row {
+    grid-template-columns: 1fr 1fr 1fr 40px;
+    padding: 8px;
+    gap: 6px;
+  }
+
+  .deleteBtn {
+    height: 30px;
+  }
+
+  .deleteBtn img {
+    height: 18px;
+    width: 18px;
+  }
+
+  .calculate {
+    height: 44px;
+    font-size: 14px;
+  }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+    gap: 20px;
+  }
+
+  .calculator {
+    padding: 15px;
+    border-radius: 8px 0px 8px 8px;
+    width: 100%;
+  }
+
+  .escr-logo {
+    width: 80px;
+  }
+
+  .info h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .info p {
+    font-size: 14px;
+  }
+
+  .header {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 8px;
+    font-size: 12px;
+    height: 44px;
+    margin-bottom: 15px;
+  }
+
+  #addBtn {
+    height: 40px;
+    width: 54px;
+    top: -40px;
+  }
+
+  #addBtn img {
+    height: 20px;
+    width: 20px;
+  }
+
+  #courseList {
+    max-height: 250px;
+    margin-bottom: 15px;
+  }
+
+  .course-row {
+    grid-template-columns: 1fr 1fr 1fr 35px;
+    padding: 8px;
+    font-size: 14px;
+    gap: 4px;
+  }
+
+  .course-row input {
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  .course-row .course-name {
+    padding: 6px;
+    font-size: 14px;
+  }
+
+  .deleteBtn {
+    height: 28px;
+    padding: 2px;
+  }
+
+  .deleteBtn img {
+    height: 16px;
+    width: 16px;
+  }
+
+  .calculate {
+    height: 42px;
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  #result {
+    margin-top: 30px;
+    font-size: 18px;
+  }
 }
