@@ -153,7 +153,7 @@ body {
 
 .calculate:hover {
   background: oklch(57.7% 0.245 27.325);
-  transition-duration: 0.5s;
+  transition-duration: 0.2s;
 }
 
 #result {
